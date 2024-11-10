@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #c14df7; /* #1f242d */
+  --second-bg-color:  #3c3f46; /* #323946 */
+  --text-color: #fff;
+  --main-color: #00eeff;
+  --main-colors: rgba(0, 238, 255, 0.7);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: .1rem solid rgba(0, 0, 0, .5);
+}
+
+.header.sticky {
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.Logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.img-logo {
+  max-height: 50px; 
+}
+
+.header .logo-1{
+  display: none;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem;
+  color: var(--second-bg-color);
+  transition: .5s ease;
+}
+
+.footer-iconTop:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
+}
+
+/* BREAK POINTS */
+/* Gaya CSS (desktop) */
+@media (max-width: 1280px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    width: 100%;
+  }
+  
+  }
+@media (max-width: 1024px) {}
+@media (max-width: 926px) {}
+@media (max-width: 991px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    padding: 2rem 3% 2rem;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 884px) {
+  .heading.heading1 {
+    margin-bottom: 8rem;
+    margin-top: -2rem;
+  }
+}
+/* Gaya CSS (TABLET) */
+@media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 1rem;
+  }
+
+  .header .logo .Logo {
+  display: none;
+  }
+
+  .header .logo .logo-1{
+    display: flex;
+  }
+
+  .header .logo-2 {
+    display: none;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  #menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: flex;
+  }
+  
+  span {
+    color: var(--main-color);
+  }  
+}
+/* Gaya CSS seluler */ 
+@media (max-width: 430px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 1rem;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-iconTop {
+    text-align: right;
+  }
+} 

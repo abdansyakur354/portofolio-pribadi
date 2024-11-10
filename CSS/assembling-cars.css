@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #c14df7; /* #1f242d */
+  --second-bg-color:  #3c3f46; /* #323946 */
+  --text-color: #fff;
+  --main-color: #00eeff;
+  --main-colors: rgba(0, 238, 255, 0.7);
+  
+}
+
+.nav-judul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 7.5rem;
+  border-bottom: 1px solid rgb(0, 0, 0, .5);
+  width: 76%;
+  height: 7rem;
+}
+
+.nav-judul h2{
+  font-style: italic; 
+  font-size: 28px;
+}
+
+header .logo{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.brand {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+main aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+}
+
+main aside .share-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 15rem;
+  gap: 10px;
+  position: fixed;
+  width: 2%;
+  height: 50%;
+  border-bottom: 2px solid var(--second-bg-color);
+}
+
+main aside .share-social:hover {
+  width: 5%;
+  transition: 0.4s ease-in-out;
+  color: var(--bg-color);
+}
+
+main aside .share-social h5 {
+  font-size: 18px;
+  color: var(--second-bg-color);
+}
+
+main aside .share-social a{
+  background-color: #fff;
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 50%;
+  border: 1px solid ;
+  color: var(--bg-color);
+  font-size: 17px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.share-social a:hover {
+  color: var(--second-bg-color);
+  transform: scale(1.1); 
+}
+
+main article {
+  width: 65%;
+  height: auto;
+}
+
+main article h1 {
+  width: 95%;
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
+}
+
+main article .date {
+  margin: 1rem 0;
+}
+
+main article .paragraf {
+  width: 95%;
+}
+main article .paragraf .sambutan {
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main article .paragraf h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+main article .paragraf p {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+main article .paragraf h2 {
+  font-size: 15px;
+}
+
+main figure {
+  margin-top: 2rem;
+  width: 23%;
+  height: 100vh;
+}
+
+main figure h1 {
+  margin: 15px 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+main figure img {
+  width: 90%;
+  border-radius: 5px;
+  transition: transform 3s;
+}
+main figure img:hover {
+  transform: scale(0.7);
+  border-radius:      30% 50% 30% 50% /      50% 30% 50% 30%;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+main figure h2 {
+  color: var(--main-color);
+  margin: 10px 0;
+  font-size: 1.8rem;
+  font-weight: 200;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main figure p {
+  width: 100%;
+  font-size: 15px;
+}
+
+main figure .social-media {
+  display: flex;
+  gap: 10px;
+  margin: 1.8rem 0;
+  width: 100%;
+  height: auto;
+}
+
+main figure .social-media a {
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 50%;
+  border: 1px solid ;
+  color: var(--main-color);
+  font-size: 17px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.social-media a:hover {
+  color: var(--bg-color);
+  transform: scale(1.1); 
+}
+
+/* Gaya CSS (TABLET) 768 x 1024*/
+@media screen and (max-width: 768px) {
+  main article {
+    width: 55%;
+  }
+
+  main figure {
+    width: 33%;
+  }
+
+  main figure p {
+    width: 95%;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 579px) {
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  main aside {
+    display: none;
+  }
+
+  main article {
+    width: 55%;
+  }
+
+  main figure {
+    width: 40%;
+  }
+}
+/* Gaya CSS seluler */
+@media screen and (max-width: 450px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10rem;
+  }
+
+  .nav-judul {
+    margin-top: 8.5rem;
+  }
+  
+  .nav-judul h2{
+    font-style: italic; 
+      font-size: 24px; 
+  }
+
+  main aside {
+    display: none;
+  }
+
+  main article {
+    width: 93%;
+  }
+
+  main article .paragraf {
+    width: 95%;
+  }
+
+  main figure {
+    width: 93%;
+  }
+
+  main figure h1 {
+    margin: 15px 0;
+    font-size: 2.2rem;
+  }
+
+  main figure h2 {
+    font-size: 1.8rem;
+    font-weight: 200;
+  }
+  
+  main figure p {
+    width: 100%;
+    font-size: 15px;
+  }
+}
